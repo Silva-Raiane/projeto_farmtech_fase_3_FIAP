@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Raiane Sirlene da Silva - RM 575984",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht1", "top": -120, "left": 230, "attrs": { "temperature": "26", "humidity": "45" } },
+    { "type": "wokwi-photoresistor-sensor", "id": "ldr1", "top": 10, "left": 240, "attrs": {} },
+    { "type": "wokwi-pushbutton", "id": "btnN", "top": 150, "left": -220, "attrs": { "color": "green", "label": "N" } },
+    { "type": "wokwi-pushbutton", "id": "btnP", "top": 220, "left": -220, "attrs": { "color": "green", "label": "P" } },
+    { "type": "wokwi-pushbutton", "id": "btnK", "top": 290, "left": -220, "attrs": { "color": "green", "label": "K" } },
+    { "type": "wokwi-relay-module", "id": "rele1", "top": 200, "left": 230, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "dht1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "dht1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "dht1:SDA", "esp:D15", "green", [ "v0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "ldr1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "ldr1:AO", "esp:D34", "yellow", [ "v0" ] ],
+    [ "btnN:1.l", "esp:D18", "green", [ "h0" ] ],
+    [ "btnN:2.l", "esp:GND.2", "black", [ "h0" ] ],
+    [ "btnP:1.l", "esp:D19", "green", [ "h0" ] ],
+    [ "btnP:2.l", "esp:GND.2", "black", [ "h0" ] ],
+    [ "btnK:1.l", "esp:D21", "green", [ "h0" ] ],
+    [ "btnK:2.l", "esp:GND.2", "black", [ "h0" ] ],
+    [ "rele1:VCC", "esp:VIN", "red", [ "v0" ] ],
+    [ "rele1:GND", "esp:GND.3", "black", [ "v0" ] ],
+    [ "rele1:IN", "esp:D23", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

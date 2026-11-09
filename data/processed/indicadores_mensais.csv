@@ -1,0 +1,4 @@
+mes,horas_bomba_ligada,agua_aplicada_l,umidade_media,umidade_min,umidade_max,ph_medio,ph_min,ph_max,horas_umidade_critica,horas_ph_fora_faixa,pct_horas_npk_completo,num_acionamentos
+2026-07,96,480000,51.0,35.2,76.5,5.76,5.26,6.41,0,0,54.6,39
+2026-08,77,385000,36.7,14.1,71.5,5.44,4.79,6.11,220,212,47.3,46
+2026-09,91,455000,47.9,35.1,64.6,5.72,5.16,6.48,0,0,46.4,46

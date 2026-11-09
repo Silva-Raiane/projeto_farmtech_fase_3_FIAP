@@ -1,0 +1,26 @@
+{
+  "origem": "Firmware da Fase 2 (sketch.ino) - parametros agronomicos e regras de decisao",
+  "cultura": "Cafe",
+  "nome_cientifico": "Coffea arabica",
+  "ph_minimo": 5.0,
+  "ph_maximo": 6.8,
+  "umidade_critica_pct": 35.0,
+  "umidade_preventiva_pct": 50.0,
+  "umidade_maxima_pct": 60.0,
+  "vazao_bomba_l_h": 5000,
+  "sensores": [
+    {"codigo": "S1", "grandeza": "Umidade do solo", "componente_wokwi": "DHT22", "pino": 15, "unidade": "%"},
+    {"codigo": "S2", "grandeza": "pH do solo", "componente_wokwi": "LDR", "pino": 34, "unidade": "pH (0-14)"},
+    {"codigo": "S3", "grandeza": "Nutrientes N, P e K", "componente_wokwi": "3 botoes verdes", "pino": "18/19/21", "unidade": "presente/ausente"}
+  ],
+  "motivos": {
+    "FALHA_SENSOR": "Falha na leitura do DHT22 - bomba travada por seguranca",
+    "SATURADO": "Solo saturado (umidade >= 60%)",
+    "PH_FORA": "pH fora da faixa ideal do cafe (5,0 a 6,8)",
+    "EMERGENCIA": "Umidade critica (< 35%) - irrigacao de emergencia",
+    "FERTIRRIGACAO": "Solo seco com NPK completo - fertirrigacao liberada",
+    "NPK_INCOMPLETO": "Falta nutriente (NPK incompleto) - aguardando adubacao",
+    "HISTERESE_LIGADA": "Histerese: completando a irrigacao ate 60%",
+    "UMIDADE_OK": "Umidade suficiente - sem necessidade de irrigar"
+  }
+}

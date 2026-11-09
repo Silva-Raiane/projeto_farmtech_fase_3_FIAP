@@ -1,0 +1,7 @@
+cultura,dim1_m,dim2_m,dim3_m,area_m2,area_ha,espacamento_m,ruas,metros_lineares,insumo,dose_ml_por_metro,litros_insumo
+Cafe,500.0,200.0,0.0,100000,10.0,3.5,57,28500,Fosfato (fertilizante liquido),500,14250.0
+Cafe,320.0,180.0,0.0,57600,5.76,3.5,51,16320,Fosfato (fertilizante liquido),500,8160.0
+Cafe,750.0,260.0,0.0,195000,19.5,3.5,74,55500,Fosfato (fertilizante liquido),500,27750.0
+Cana-de-acucar,600.0,400.0,300.0,150000.0,15.0,1.5,200,100000.0,Herbicida pre-emergente,300,30000.0
+Cana-de-acucar,850.0,620.0,450.0,330750.0,33.075,1.5,300,220500.0,Herbicida pre-emergente,300,66150.0
+Cana-de-acucar,400.0,250.0,200.0,65000.0,6.5,1.5,133,43225.0,Herbicida pre-emergente,300,12967.5

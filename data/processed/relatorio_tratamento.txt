@@ -1,0 +1,56 @@
+FARMTECH SOLUTIONS - FASE 3 - RELATORIO DO TRATAMENTO
+============================================================
+Periodo analisado        : 01/07/2026 00:00 a 30/09/2026 23:00
+Origem das linhas        : {'simulada': 2196, 'reconstruida': 12}
+
+LIMPEZA
+  Linhas no CSV bruto            : 2211
+  Linhas cortadas (descartadas)  : 3
+  Datas invalidas (descartadas)  : 0
+  Linhas duplicadas (removidas)  : 12
+  Falhas do DHT22 ('ERRO')       : 6
+  Umidade fora da faixa fisica   : 3
+  pH com LDR saturado (0 ou 14)  : 7
+  Picos de umidade (Hampel)      : 7
+  Picos de pH (Hampel)           : 1
+  Horas ausentes reconstruidas   : 12
+  Umidade interpolada (horas)    : 28
+  pH interpolado (horas)         : 20
+  Linhas finais tratadas         : 2208
+
+REDUCAO DE RUIDO (desvio padrao da variacao hora a hora)
+  Umidade: 1.924 -> 0.744 p.p.
+  pH     : 0.054 -> 0.017
+
+INDICADORES GERAIS
+  Acionamentos da bomba          : 131
+  Horas de bomba ligada          : 264
+  Duracao media do acionamento   : 2.0 h
+  Agua aplicada (estimada)       : 1.320.000 L
+  Umidade media / min / max      : 45.1 / 14.1 / 76.5 %
+  pH medio / min / max           : 5.64 / 4.79 / 6.48
+
+HORAS POR FAIXA DE UMIDADE
+faixa_umidade
+critica (<35%)       220
+seca (35-50%)        923
+adequada (50-60%)    821
+saturada (>=60%)     244
+
+INDICADORES MENSAIS
+         horas_bomba_ligada  agua_aplicada_l  umidade_media  umidade_min  umidade_max  ph_medio  ph_min  ph_max  horas_umidade_critica  horas_ph_fora_faixa  pct_horas_npk_completo  num_acionamentos
+mes                                                                                                                                                                                                  
+2026-07                  96           480000           51.0         35.2         76.5      5.76    5.26    6.41                      0                    0                    54.6                39
+2026-08                  77           385000           36.7         14.1         71.5      5.44    4.79    6.11                    220                  212                    47.3                46
+2026-09                  91           455000           47.9         35.1         64.6      5.72    5.16    6.48                      0                    0                    46.4                46
+
+CORRELACAO COM A BOMBA (|r| em ordem decrescente)
+Var. umidade (h+1)    0.642
+Umidade < 35%         0.273
+pH na faixa           0.120
+pH                    0.068
+N                     0.057
+NPK completo          0.057
+K                     0.028
+Umidade               0.009
+P                     0.001
