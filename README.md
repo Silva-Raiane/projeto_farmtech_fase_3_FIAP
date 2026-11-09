@@ -14,10 +14,10 @@
 
 ## FarmTech Solutions
 
-## 👨‍🎓 Integrantes:
+## Integrantes:
 - <a href="https://github.com/">Raiane Sirlene da Silva</a> — RM 575984
 
-## 👩‍🏫 Professores:
+## Professores:
 
 ### Tutor(a)
 - <a href="#">Nome do Tutor</a>
@@ -27,13 +27,7 @@
 
 ---
 
-## 🎥 Vídeo demonstrativo
-
-**[Assista no YouTube (não listado)](COLE_AQUI_O_LINK_DO_VIDEO)** — até 4 minutos: tratamento dos dados, indicadores e gráficos, criação das tabelas no Oracle, carga e consultas de gestão.
-
----
-
-## 📜 Descrição
+## Descrição
 
 Na Fase 2, o circuito com ESP32 passou a ler umidade, pH e nutrientes e a acionar a bomba de irrigação do café. Só que tudo existia apenas no Monitor Serial do Wokwi e se perdia a cada execução. **A Fase 3 dá memória ao sistema**: as leituras viram um histórico tratado, analisado e persistido em um banco Oracle, junto com os dados de manejo das Fases 1 e 2.
 
@@ -57,7 +51,7 @@ O trabalho tem duas frentes:
 
 ---
 
-## 🗂 Origem dos dados das Fases 1 e 2
+## Origem dos dados das Fases 1 e 2
 
 | Arquivo | Fase | Conteúdo | Vai para |
 |---|---|---|---|
@@ -309,10 +303,10 @@ Em `docs/evidencias/`:
 
 ---
 
-## 📁 Estrutura de pastas
+## Estrutura de pastas
 
 ```
-CAP-X-ETAPAS-DE-UMA-MAQUINA-AGRICOLA/
+main/
 ├── config/
 │   └── oracle.env.example          # modelo da conexão (o .env real não vai pro Git)
 ├── data/
@@ -335,7 +329,7 @@ CAP-X-ETAPAS-DE-UMA-MAQUINA-AGRICOLA/
 └── README.md
 ```
 
-## 🔧 Como executar o código
+## Como executar o código
 
 **Pré-requisitos:** Python 3.10+, Docker Desktop (ou acesso ao Oracle da FIAP), navegador para o Wokwi.
 
@@ -359,12 +353,9 @@ python src/banco/carga_oracle.py
 
 Atalhos úteis: `--dry-run` valida arquivos e SQL sem conectar ao banco; `--criar-tabelas` e `--consultas` executam só essas etapas.
 
-## 📎 Links e Observações
+## Observações
 
-### 🔗 Links do Projeto
-* **[Vídeo demonstrativo (YouTube, não listado)](COLE_AQUI_O_LINK_DO_VIDEO)** — funcionamento completo da Fase 3.
-
-### 🧠 Decisões Técnicas
+### Decisões Técnicas
 - **Relógio simulado no firmware em vez de timestamp do PC**: o enunciado pede histórico de meses; com 1 ciclo = 1 h, a mesma simulação gera a escala de tempo agronômica.
 - **Filtro de Hampel antes da média móvel**: a média móvel sozinha "espalha" um pico de 99,9% pelas horas vizinhas; remover o pico primeiro deixa a suavização honesta.
 - **Média móvel centrada** (e não só para trás): não atrasa a curva, o que importa para comparar com o momento do acionamento.
@@ -375,6 +366,6 @@ Atalhos úteis: `--dry-run` valida arquivos e SQL sem conectar ao banco; `--cria
 
 ---
 
-## 📋 Licença
+## Licença
 
 <img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/fiap-tutoria/FIAP-PORTFOLIO-AI">TEMPLATE - FIAP PORTFÓLIO AI</a> por <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://fiap.com.br">FIAP</a> está licenciado sobre <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Attribution 4.0 International</a>.</p>
